@@ -1,1 +1,14 @@
-@use "reset";
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import "reset";
+
+@import "components/customers";
+@import 'components/buttons';
+@import 'components/search';
+@import 'components/table';
+
+@import 'layout/content';
+@import 'layout/grid';
+@import 'layout/sidebar';
+
+@import 'base/typography';

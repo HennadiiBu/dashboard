@@ -1,0 +1,104 @@
+@import "../abstracts/variables";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 3.6rem 2.8rem 7.6rem;
+  background-color: $white;
+  box-shadow: 0 1rem 6rem 0 rgba(226, 236, 249, 0.5);
+  transition: transform 0.4s;
+
+  @include v-md {
+    position: fixed;
+    transform: translateX(-100%);
+    padding: 3.2rem 1.6rem;
+    z-index: 1;
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  &__logo {
+    width: 21.7rem;
+  }
+
+  &__nav {
+    margin-bottom: 3.2rem;
+  }
+
+  &__nav-list {
+    margin-top: 5.3rem;
+    display: flex;
+    gap: 1.8rem;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    color: $gray-2;
+  }
+
+  &__nav-item {
+    padding: 1.1rem 0.8rem 1.1rem 1.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    &:hover {
+      background-color: $blue-2;
+      transition: background-color 0.4s;
+    }
+  }
+
+  &__nav-item--selected {
+    color: $white;
+    background-color: $blue-1;
+    &:hover {
+      background-color: $blue-1;
+    }
+  }
+
+  &__nav-item > span {
+    margin-left: 1.4rem;
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &__chevron-right {
+    margin-left: auto;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  &__user {
+    margin-top: auto;
+    display: flex;
+  }
+
+  &__user-wrapper {
+    margin-left: 1.2rem;
+  }
+
+  &__user-name {
+    margin: 0.2rem 0 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $black;
+    letter-spacing: 0.014rem;
+  }
+
+  &__user-position {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.012rem;
+    color: $gray-4;
+  }
+
+  &__user-img {
+    border-radius: 50%;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}

@@ -1,0 +1,104 @@
+
+
+.table {
+    width: 100%;
+    overflow-x: auto;
+  
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $blue-2;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $blue-1;
+      border-radius: 10px;
+    }
+  
+    
+    &__content {
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: 100%;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: -0.014rem;
+      color: $gray-1;
+    }
+  
+    &__head th {
+      text-align: start;
+      font-weight: 500;
+    }
+  
+    &__row-head {
+      height: 5rem;
+      color: $gray-3;
+    }
+  
+    &__row-body {
+      height: 6.9rem;
+      border-bottom: 0.1rem solid $gray-8;
+    }
+  
+    &__data-name {
+      width: 19.4%;
+      min-width: 15rem;
+    }
+    &__data-company {
+      width: 14.7%;
+      min-width: 9rem;
+    }
+    &__data-phone {
+      width: 17.8%;
+      min-width: 13rem;
+    }
+    &__data-email {
+      width: 23.4%;
+      min-width: 19rem;
+    }
+    &__data-country {
+      width: 15.9%;
+      min-width: 12rem;
+    }
+  
+    thead &__data-status {
+      padding-left: 1.4rem;
+    }
+  
+    tbody &__data-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8rem;
+      height: 2.9rem;
+      border-radius: 0.4rem;
+    }
+    
+    &__data-status--active {
+      color: $green-1;
+      background-color: $green-4;
+      border: solid 0.1rem $green-1;
+    }
+    
+    &__data-status--inactive {
+      color: $red-1;
+      background-color: $red-2;
+      border: solid 0.1rem $red-1;
+    }
+  }
+  
+  .table-line {
+    position: absolute;
+    left: 0;
+    top: 16.5rem;
+    width: 100%;
+    border-bottom: 0.1rem solid $gray-8;
+    display: block;
+    @include v-lg {
+      top: 15.6rem;
+    }
+    @include v-xs {
+      top: 22.5rem;
+    }
+  }
