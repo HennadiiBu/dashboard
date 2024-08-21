@@ -1,11 +1,11 @@
 {
-  "name": "vite-sass-app-template",
+  "name": "dashboard",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-sass-app-template/",
+    "build": "vite build --base=/dashboard/",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
